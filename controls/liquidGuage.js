@@ -1,7 +1,7 @@
-jQuery.sap.declare("com.wfm.controls.liquidGuage");
+jQuery.sap.declare("com.ecert.controls.liquidGuage");
 jQuery.sap.require("sap.ui.core.Control");
 
-sap.ui.core.Control.extend("com.wfm.controls.liquidGuage", {
+sap.ui.core.Control.extend("com.ecert.controls.liquidGuage", {
 	metadata: {
 		properties: {
 			guage:{

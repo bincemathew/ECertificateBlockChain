@@ -1,8 +1,8 @@
-jQuery.sap.declare("com.wfm.util.Formatter");
+jQuery.sap.declare("com.ecert.util.Formatter");
 
 jQuery.sap.require("sap.ui.core.format.DateFormat");
 
-com.wfm.util.Formatter = {
+com.ecert.util.Formatter = {
 
 	_statusStateMap: {
 		"P": "Success",
@@ -31,12 +31,12 @@ com.wfm.util.Formatter = {
 		return value;
 	},
 	BillState: function(value) {
-		var map = com.wfm.util.Formatter._statusStateMap;
+		var map = com.ecert.util.Formatter._statusStateMap;
 		return (value && map[value]) ? map[value] : "None";
 	},
 
 	statusState: function(value) {
-		var map = com.wfm.util.Formatter._statusStateMap;
+		var map = com.ecert.util.Formatter._statusStateMap;
 		return (value && map[value]) ? map[value] : "None";
 	},
 attendanceState: function(value) {

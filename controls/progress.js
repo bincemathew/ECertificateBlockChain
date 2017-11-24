@@ -1,6 +1,6 @@
-jQuery.sap.declare("com.wfm.controls.progress");
+jQuery.sap.declare("com.ecert.controls.progress");
 jQuery.sap.require("sap.ui.core.Control");
-sap.ui.core.Control.extend("com.wfm.controls.progress", {
+sap.ui.core.Control.extend("com.ecert.controls.progress", {
 	metadata: {
 		properties: {
 			label: {

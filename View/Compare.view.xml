@@ -1,11 +1,11 @@
-<core:View controllerName="com.wfm.View.Compare" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
+<core:View controllerName="com.ecert.View.Compare" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:viz="sap.viz.ui5.controls" xmlns="sap.m">
 	<Page navButtonPress="backToEmpDetails" showNavButton="true" title="{i18n>CompareTitle}">
 		<content>
 			<IconTabBar expanded="{device>/isNoPhone}">
 				<items>
 					<IconTabFilter icon="sap-icon://kpi-corporate-performance" iconColor="Negative" text="Performance">
-						<core:Fragment fragmentName="com.wfm.fragments.CompareTable" type="XML"/>
+						<core:Fragment fragmentName="com.ecert.fragments.CompareTable" type="XML"/>
 					</IconTabFilter>
 					<IconTabSeparator icon=""/>
 					<IconTabFilter icon="sap-icon://bar-chart" iconColor="Positive" text="Chart">

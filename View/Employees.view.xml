@@ -1,4 +1,4 @@
-<core:View controllerName="com.wfm.View.Employees" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+<core:View controllerName="com.ecert.View.Employees" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Page title="{i18n>objectTitle}">
 		<subHeader>
@@ -8,11 +8,11 @@
 				</contentLeft>
 			</Bar>
 		</subHeader>
-		<List id="list" items="{/employees}" mode="{device>/listMode}" select="handleListSelect">
+		<List id="list" items="{/certificates}" mode="{device>/listMode}" select="handleListSelect">
 			<!-- 					<StandardListItem press="handleListItemPress" title="{empId}" description="{empName}"/> -->
-			<ObjectListItem icon="{image}" number="{total}" numberUnit="Hours" press="handleListItemPress" title="{desgination}" type="Active">
+			<ObjectListItem icon="{CertificateTypeIcon}" number="{certficateId}" numberUnit="{IssuingAuthority}" press="handleListItemPress" title="{CertificateOwner}" type="Active">
 				<attributes>
-					<ObjectAttribute text="{empName}"/>
+					<ObjectAttribute text="{desc}"/>
 				</attributes>
 			</ObjectListItem>
 		</List>

@@ -1,6 +1,6 @@
-jQuery.sap.require("com.wfm.util.Formatter");
+jQuery.sap.require("com.ecert.util.Formatter");
 sap.ui.define("sap.ui.core.routing.History");
-sap.ui.controller("com.wfm.View.Compare", {
+sap.ui.controller("com.ecert.View.Compare", {
 
 	/**
 	 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -12,7 +12,7 @@ sap.ui.controller("com.wfm.View.Compare", {
 		this.router.attachRoutePatternMatched(this._handleRouteMatched, this);
 		this.loadChart(oEvent);
 
-		//        var oPersId = {container: "com.wfm.View.Compare", item: "Table"};
+		//        var oPersId = {container: "com.ecert.View.Compare", item: "Table"};
 		//        var oProvider = sap.ushell.Container.getService("Personalization").getPersonalizer(oPersId);
 		//        this.oTablePerso                = new sap.m.TablePersoController({
 		//                                                table: sap.ui.getCore().byId("Table"),

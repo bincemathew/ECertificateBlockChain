@@ -1,6 +1,6 @@
-jQuery.sap.require("com.wfm.controls.progress");
-jQuery.sap.require("com.wfm.util.Formatter");
-sap.ui.controller("com.wfm.View.EmpDetails", {
+jQuery.sap.require("com.ecert.controls.progress");
+jQuery.sap.require("com.ecert.util.Formatter");
+sap.ui.controller("com.ecert.View.EmpDetails", {
 
 	/**
 	 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -15,7 +15,7 @@ sap.ui.controller("com.wfm.View.EmpDetails", {
 	_handleRouteMatched: function(evt) {
 		this.empIndex = evt.getParameter("arguments").data;
 
-		var context = sap.ui.getCore().byId("splitApp").getModel().getContext('/employees/' + this.empIndex);
+		var context = sap.ui.getCore().byId("splitApp").getModel().getContext('/certificates/' + this.empIndex);
 
 		this.getView().setBindingContext(context);
 	},
@@ -52,7 +52,7 @@ sap.ui.controller("com.wfm.View.EmpDetails", {
 	 * @memberOf View.EmpDetails
 	 */
 	onAfterRendering: function() {
-		circle = new com.wfm.controls.progress("myId", {
+		circle = new com.ecert.controls.progress("myId", {
 			value: 36,
 			label: 'Status',
 			valueChanged: function(erg) {},

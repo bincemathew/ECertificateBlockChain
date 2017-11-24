@@ -1,5 +1,5 @@
-jQuery.sap.require("com.wfm.util.Formatter");
-sap.ui.controller("com.wfm.View.Employees", {
+jQuery.sap.require("com.ecert.util.Formatter");
+sap.ui.controller("com.ecert.View.Employees", {
 
 	/**
 	 * Called when a controller is instantiated and its View controls (if available) are already created.

@@ -60,7 +60,7 @@
 							<Image src="{image_s}"/>
 							</HBox>
 							<Text  text="{attendance}"/>
-							<ProgressIndicator class="sapUiSmallMarginBottom" displayValue ="Out Of 8 Hours" percentValue="{path: 'attendance',formatter: 'com.wfm.util.Formatter.float'}" showValue="true" state="{path: 'attendance',formatter: 'com.wfm.util.Formatter.attendanceState'}"></ProgressIndicator>
+							<ProgressIndicator class="sapUiSmallMarginBottom" displayValue ="Out Of 8 Hours" percentValue="{path: 'attendance',formatter: 'com.ecert.util.Formatter.float'}" showValue="true" state="{path: 'attendance',formatter: 'com.ecert.util.Formatter.attendanceState'}"></ProgressIndicator>
 							
 						</cells>
 					</ColumnListItem>

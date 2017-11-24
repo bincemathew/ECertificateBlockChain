@@ -1,6 +1,6 @@
-jQuery.sap.declare("com.wfm.Component");
+jQuery.sap.declare("com.ecert.Component");
 
-sap.ui.core.UIComponent.extend("com.wfm.Component", {
+sap.ui.core.UIComponent.extend("com.ecert.Component", {
 
 	metadata: {
 		"abstract": true,
@@ -17,7 +17,7 @@ sap.ui.core.UIComponent.extend("com.wfm.Component", {
 
 			config: {
 				viewType: "XML",
-				viewPath: "com.wfm.View",
+				viewPath: "com.ecert.View",
 				clearTarget: false,
 				transition: "slide"
 			},
@@ -28,7 +28,7 @@ sap.ui.core.UIComponent.extend("com.wfm.Component", {
 					targetControl: "splitApp",
 					targetAggregation: "masterPages",
 					subroutes: [{
-						pattern: "employees/{data}",
+						pattern: "Employees/{data}",
 						name: "empDetails",
 						view: "EmpDetails",
 						targetAggregation: "detailPages"
@@ -47,11 +47,11 @@ sap.ui.core.UIComponent.extend("com.wfm.Component", {
 	},
 
 	init: function() {
-		//		jQuery.sap.require("com.wfm.js.d3");                // you can call js library files like this also, but now we can do the same in the Metadata structure
-		//		jQuery.sap.require("com.wfm.js.liquidFillGuage");  
-		//		jQuery.sap.require("com.wfm.js.radialProgress");
-		//		jQuery.sap.require("com.wfm.controls.progress");
-		//		jQuery.sap.require("com.wfm.controls.liquidGuage")
+		//		jQuery.sap.require("com.ecert.js.d3");                // you can call js library files like this also, but now we can do the same in the Metadata structure
+		//		jQuery.sap.require("com.ecert.js.liquidFillGuage");  
+		//		jQuery.sap.require("com.ecert.js.radialProgress");
+		//		jQuery.sap.require("com.ecert.controls.progress");
+		//		jQuery.sap.require("com.ecert.controls.liquidGuage")
 
 		jQuery.sap.require("sap.m.routing.RouteMatchedHandler");
 		jQuery.sap.require("sap.ui.core.routing.HashChanger");
@@ -71,14 +71,14 @@ sap.ui.core.UIComponent.extend("com.wfm.Component", {
 
 		var oView = sap.ui.view({
 			id: "splitApp",
-			viewName: "com.wfm.View.App",
+			viewName: "com.ecert.View.App",
 			type: "XML",
 			viewData: {
 				component: this
 			}
 		});
 
-		var oModel = new sap.ui.model.json.JSONModel('model/Employees.json');
+		var oModel = new sap.ui.model.json.JSONModel('model/certificates.json');
 		oView.setModel(oModel);
 
 		// set i18n model
