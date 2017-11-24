@@ -7,7 +7,10 @@
 				<IconTabBar expanded="{device>/isNoPhone}">
 					<items>
 						<IconTabFilter icon="sap-icon://group" iconColor="Negative" text="Certificate">
+							<l:VerticalLayout class="sapUiSmallMargin" align="Center" >
 							<Image height="50px"  src="{ownerImage}" width="50px"></Image>
+							<Text text="{certificateOwner}"/>	
+							</l:VerticalLayout>
 						</IconTabFilter>
 						<!--<IconTabSeparator icon=""/>-->
 						<!--<IconTabFilter icon="sap-icon://performance" iconColor="Positive" text="Attendance">-->
@@ -53,13 +56,13 @@
 				</l:content>
 			</l:Grid>
 		</content>
-		<footer>
-			<Bar>
-				<contentRight>
-					<Button icon="sap-icon://edit" press="onEditBtn" text="Edit Ratings" type="Transparent"></Button>
-					<Button press="openCompare" text="Compare Data" type="Emphasized"></Button>
-				</contentRight>
-			</Bar>
-		</footer>
+		<!--<footer>-->
+		<!--	<Bar>-->
+		<!--		<contentRight>-->
+		<!--			<Button icon="sap-icon://edit" press="onEditBtn" text="Edit Ratings" type="Transparent"></Button>-->
+		<!--			<Button press="openCompare" text="Compare Data" type="Emphasized"></Button>-->
+		<!--		</contentRight>-->
+		<!--	</Bar>-->
+		<!--</footer>-->
 	</Page>
 </core:View>
