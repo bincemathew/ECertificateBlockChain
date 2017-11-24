@@ -1,0 +1,65 @@
+<core:View controllerName="com.wfm.View.EmpDetails" xmlns:c="com.wfm.controls" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page navButtonPress="backToHome" showNavButton="{device>/isPhone}" title="{i18n>objectDetailTitle}">
+		<content>
+			<Panel class="sapUiNoMarginBegin sapUiNoMarginEnd">
+				<ObjectIdentifier class="sapUiMediumMarginBottom" text="" title="Employee Status" titleActive="false"></ObjectIdentifier>
+				<IconTabBar expanded="{device>/isNoPhone}">
+					<items>
+						<IconTabFilter icon="sap-icon://group" iconColor="Negative" text="Employee">
+							<Image hieght="300px" src="{image}" width="300px"></Image>
+						</IconTabFilter>
+						<IconTabSeparator icon=""/>
+						<IconTabFilter icon="sap-icon://performance" iconColor="Positive" text="Attendance">
+								<c:progress id="progressControl" label="Attendance" value="{attendance}"></c:progress>
+						</IconTabFilter>
+						<IconTabFilter icon="sap-icon://timesheet" iconColor="Critical" text="Hours">
+								<c:liquidGuage fillPercent="{total}" guage="MyGuage"></c:liquidGuage>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+			</Panel>
+			<f:SimpleForm columnsL="1" columnsM="1" editable="false" emptySpanL="4" emptySpanM="4" id="message" labelSpanL="3" labelSpanM="3"
+				layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024">
+				<f:content>
+					<Image height="50px" src="./images/Warning.png" width="50px"></Image>
+					<Text text="Warning You Are About To Modify Employee Records"/>
+				</f:content>
+			</f:SimpleForm>
+			<l:Grid defaultSpan="L12 M12 S12" width="auto">
+				<l:content>
+					<f:SimpleForm columnsL="3" columnsM="3" editable="false" emptySpanL="4" emptySpanM="4" id="adDetails" labelSpanL="3" labelSpanM="3"
+						layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024" title="Additional Details">
+						<f:content>
+							<Label text="Name"/>
+							<Text text="{empName}"/>
+							<Label text="Project"/>
+							<Text text="{empDetails/0/project}"/>
+							<Label text="Billable"/>
+							<Text text="{path: 'empDetails/0/billable',formatter: 'com.wfm.util.Formatter.BillType'}"/>
+							<Label text="Email"/>
+							<Text text="{empDetails/0/email}"/>
+							<Label text="Phone"/>
+							<Text text="{empDetails/0/phone}"/>
+							<Label class="sapUiTinyMarginTop" text="Attendance Rating"/>
+							<RatingIndicator class="sapUiSmallMarginBottom" enabled="false" id="attendRating" liveChange="ratingChanged" maxValue="8"
+								tooltip="Attendance Rating" value="{path: 'total',formatter: 'com.wfm.util.Formatter.float'}" width="100%"/>
+							<Label class="sapUiTinyMarginTop" text="Attendance Status"/>
+							<ProgressIndicator class="sapUiSmallMarginBottom" displayValue="Out Of 8 Hours"
+								percentValue="{path: 'attendance',formatter: 'com.wfm.util.Formatter.float'}" showValue="true"
+								state="{path: 'attendance',formatter: 'com.wfm.util.Formatter.attendanceState'}"></ProgressIndicator>
+						</f:content>
+					</f:SimpleForm>
+				</l:content>
+			</l:Grid>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button icon="sap-icon://edit" press="onEditBtn" text="Edit Ratings" type="Transparent"></Button>
+					<Button press="openCompare" text="Compare Data" type="Emphasized"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

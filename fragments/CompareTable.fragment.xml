@@ -1,0 +1,70 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"  xmlns:l="sap.ui.layout"	xmlns:f="sap.ui.layout.form">
+		<Panel>
+		<HBox>
+	<layoutData>
+		    <l:GridData
+						span="L12 M12 S12"
+						linebreakL="true"
+						linebreakM="true"
+						linebreakS="true" />
+				</layoutData>
+<!-- 				<Button text="1"></Button> -->
+
+</HBox>
+
+			<Table id="Table" mode="{device>/listMode}" inset="false" selectionChange="onItemSelection" updateFinished="onItemsUpdateFinished"
+				updateStarted="onItemsUpdateStarted" width="auto" items="{/employees}">
+	<layoutData>
+		    <l:GridData
+						span="L12 M12 S12"
+						linebreakL="true"
+						linebreakM="true"
+						linebreakS="true" />
+				</layoutData>
+				<headerToolbar>
+					<Toolbar>
+						<Label text="{i18n>XTOL_Header}"/>
+						<ToolbarSpacer/>
+<!-- 						<Select class="sapUiMediumMarginBegin sapUiMediumMarginEnd"> -->
+<!-- 					<core:Item key="AAE" text="All Attendance" /> -->
+<!-- 					<core:Item key="PAE" text="Positive Attendance" /> -->
+<!-- 					<core:Item key="NAE" text="Negative Attendance" /> -->
+<!-- 				      </Select> -->
+<!-- 				      <SearchField search="handleSearch" liveChange="handleLiveChange" width="10rem" selectOnFocus="false"/> -->
+<!-- 						<Button icon="sap-icon://action-settings" id="PersoButton" tap="onPersoButtonPressed" tooltip="{i18n>xtolTablePersonalization}"/> -->
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column demandPopin="true"  id="EmployeeID" minScreenWidth="Small" visible="true">
+						<Text text="{i18n>XCOL_EmpID}"/>
+					</Column>
+					<Column demandPopin="true" hAlign="Center"  id="EmployeeName" minScreenWidth="Medium" visible="true">
+						<Text text="{i18n>XCOL_EmpName}"/>
+					</Column>
+					<Column demandPopin="true"  id="EmployeeImage" minScreenWidth="Small" visible="true">
+						<Text text="{i18n>XCOL_EmpImage}"/>
+					</Column>
+					<Column demandPopin="true"  hAlign="Center" id="EmpAttendance" minScreenWidth="Small" visible="true">
+						<Text text="{i18n>XCOL_Attendance}"/>
+					</Column>
+					<Column demandPopin="true"  id="Status" minScreenWidth="Large" visible="true">
+						<Text text="{i18n>XCOL_Status}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{empId}"/>
+							<Text text="{empName}"/>
+							<HBox>
+							<Image src="{image_s}"/>
+							</HBox>
+							<Text  text="{attendance}"/>
+							<ProgressIndicator class="sapUiSmallMarginBottom" displayValue ="Out Of 8 Hours" percentValue="{path: 'attendance',formatter: 'com.wfm.util.Formatter.float'}" showValue="true" state="{path: 'attendance',formatter: 'com.wfm.util.Formatter.attendanceState'}"></ProgressIndicator>
+							
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			</Panel>
+</core:FragmentDefinition>

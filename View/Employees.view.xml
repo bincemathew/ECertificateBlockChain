@@ -1,0 +1,26 @@
+<core:View controllerName="com.wfm.View.Employees" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page title="{i18n>objectTitle}">
+		<subHeader>
+			<Bar>
+				<contentLeft>
+					<SearchField liveChange="handleLiveChange" selectOnFocus="false" width="100%"></SearchField>
+				</contentLeft>
+			</Bar>
+		</subHeader>
+		<List id="list" items="{/employees}" mode="{device>/listMode}" select="handleListSelect">
+			<!-- 					<StandardListItem press="handleListItemPress" title="{empId}" description="{empName}"/> -->
+			<ObjectListItem icon="{image}" number="{total}" numberUnit="Hours" press="handleListItemPress" title="{desgination}" type="Active">
+				<attributes>
+					<ObjectAttribute text="{empName}"/>
+				</attributes>
+			</ObjectListItem>
+		</List>
+		<footer>
+			<Bar>
+				<contentRight>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

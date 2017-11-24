@@ -1,0 +1,38 @@
+{
+	"certificates": 
+	[
+		{
+		"certficateId":"UaC397722SyE43azxr",
+		"type":"BatchelorsDegree",
+		"desc":"BE in Information Technology",
+		"dateofissue":07062009,
+		"IssuingAuthority":"MGUniversity",
+		"IssuingAuthorityID":"MGUIND686513",
+		"CertificateOwner":"BINCEMATHEW",
+		"CertificateOwnerIDProofType":"Passport",
+		"OwnerIDProofNumber":"H6763762"
+	},
+    {
+		"certficateId":"UaC397722SyE43azxr",
+		"type":"BatchelorsDegree",
+		"desc":"BE in Information Technology",
+		"dateofissue":07062009,
+		"IssuingAuthority":"MGUniversity",
+		"IssuingAuthorityID":"MGUIND686513",
+		"CertificateOwner":"BINCEMATHEW",
+		"CertificateOwnerIDProofType":"Passport",
+		"OwnerIDProofNumber":"H6763762"
+	},		
+	{
+		"certficateId":"UaC397722SyE43azxr",
+		"type":"BatchelorsDegree",
+		"desc":"BE in Information Technology",
+		"dateofissue":07062009,
+		"IssuingAuthority":"MGUniversity",
+		"IssuingAuthorityID":"MGUIND686513",
+		"CertificateOwner":"BINCEMATHEW",
+		"CertificateOwnerIDProofType":"Passport",
+		"OwnerIDProofNumber":"H6763762"
+	}
+	]
+}
