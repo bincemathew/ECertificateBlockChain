@@ -78,7 +78,17 @@ sap.ui.core.UIComponent.extend("com.ecert.Component", {
 			}
 		});
 
-		var oModel = new sap.ui.model.json.JSONModel('model/certificates.json');
+		var oModel = new sap.ui.model.json.JSONModel();// 'model/certificates.json'
+		fetch('http://localhost:3000/api/Certificate').then(function(response) {
+		response.json().then(function(data) {
+			console.log(data);
+			oModel.setData({certificates: data});
+		 });
+
+		  
+		});
+
+		
 		oView.setModel(oModel);
 
 		// set i18n model
