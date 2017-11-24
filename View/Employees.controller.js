@@ -32,7 +32,7 @@ sap.ui.controller("com.ecert.View.Employees", {
 		var filters = [];
 		var sQuery = evt.getParameters().newValue;
 		if (sQuery && sQuery.length > 0) {
-			var filter = new sap.ui.model.Filter("empName", sap.ui.model.FilterOperator.Contains, sQuery);
+			var filter = new sap.ui.model.Filter("certficateId", sap.ui.model.FilterOperator.Contains, sQuery);
 			filters.push(filter);
 		}
 
