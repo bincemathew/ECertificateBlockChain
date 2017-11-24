@@ -7,7 +7,7 @@
 				<IconTabBar expanded="{device>/isNoPhone}">
 					<items>
 						<IconTabFilter icon="sap-icon://group" iconColor="Negative" text="Certificate">
-							<Image src="{CertificateTypeIcon}" ></Image>
+							<Image height="50px"  src="{ownerImage}" width="50px"></Image>
 						</IconTabFilter>
 						<!--<IconTabSeparator icon=""/>-->
 						<!--<IconTabFilter icon="sap-icon://performance" iconColor="Positive" text="Attendance">-->
@@ -32,15 +32,15 @@
 						layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024" title="Additional Details">
 						<f:content>
 							<Label text="Name"/>
-							<Text text="{CertificateOwner}"/>
+							<Text text="{certificateOwner}"/>
 							<Label text="Certificate Type"/>
 							<Text text="{type}"/>
 							<Label text="Issuing Authority"/>
-							<Text text="{IssuingAuthority}"/>
+							<Text text="{issuer}"/>
 							<Label text="Issue Date"/>
-							<Text text="{dateofissue}"/>
+							<Text text="{issueDate}"/>
 							<Label text="Description of Certificate"/>
-							<Text text="{desc}"/>
+							<Text text="{description}"/>
 							<Label class="sapUiTinyMarginTop" text="Attendance Rating"/>
 							<!--<RatingIndicator class="sapUiSmallMarginBottom" enabled="false" id="attendRating" liveChange="ratingChanged" maxValue="8"-->
 							<!--	tooltip="Attendance Rating" value="{path: 'total',formatter: 'com.ecert.util.Formatter.float'}" width="100%"/>-->
