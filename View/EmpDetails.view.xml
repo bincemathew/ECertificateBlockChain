@@ -36,7 +36,7 @@
 							<Label text="Certificate Type"/>
 							<Text text="{type}"/>
 							<Label text="Issuing Authority"/>
-							<Text text="{path: '/IssuingAuthority',formatter: 'com.ecert.util.Formatter.BillType'}"/>
+							<Text text="{IssuingAuthority}"/>
 							<Label text="Issue Date"/>
 							<Text text="{dateofissue}"/>
 							<Label text="Description of Certificate"/>
