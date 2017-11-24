@@ -10,7 +10,7 @@
 		</subHeader>
 		<List id="list" items="{/certificates}" mode="{device>/listMode}" select="handleListSelect">
 			<!-- 					<StandardListItem press="handleListItemPress" title="{empId}" description="{empName}"/> -->
-			<ObjectListItem icon="{certificateTypeIcon}" number="{certficateId}" numberUnit="{issuer}" press="handleListItemPress" title="{certificateOwner}" type="Active">
+			<ObjectListItem icon="{certificateTypeIcon}"  numberUnit="{issuer}" press="handleListItemPress" title="{certficateId}" type="Active">
 				<attributes>
 					<ObjectAttribute text="{description}"/>
 				</attributes>
